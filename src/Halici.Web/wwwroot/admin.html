@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="robots" content="noindex,nofollow" />
+    <title>Yönetim paneli — Fırat Trading</title>
+    <link rel="icon" href="/images/mark.svg" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/shared.js" defer></script>
+    <script src="/admin.js" defer></script>
+  </head>
+  <body class="admin-body">
+    <header class="site-header wrap">
+      <a class="brand" href="/"
+        ><img src="/images/mark.svg" alt="" /><span
+          >FIRAT TRADING<small>KOLEKSİYON YÖNETİMİ</small></span
+        ></a
+      ><a class="admin-link" href="/">Vitrine dön ↗</a>
+    </header>
+    <main class="wrap admin-main">
+      <section id="login-panel" class="login-panel">
+        <div class="eyebrow">SİZE ÖZEL ALAN</div>
+        <h1>Koleksiyonunuz,<br /><em>sizin ellerinizde.</em></h1>
+        <p>Halılarınızı eklemek ve düzenlemek için giriş yapın.</p>
+        <form id="login-form">
+          <label
+            >Kullanıcı adı<input
+              name="username"
+              autocomplete="username"
+              required
+              maxlength="100"
+              autofocus /></label
+          ><label
+            >Parola<input
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              required
+              maxlength="512"
+          /></label>
+          <p id="login-error" class="form-error" role="alert"></p>
+          <button class="primary" type="submit">
+            Giriş yap <span>→</span>
+          </button>
+        </form>
+      </section>
+      <section id="dashboard" hidden>
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">YÖNETİM PANELİ</div>
+            <h1>Koleksiyonunuzu yönetin.</h1>
+            <p>Yeni parçalar ekleyin, hikâyelerini paylaşın.</p>
+          </div>
+          <div class="admin-actions">
+            <button class="secondary" id="logout">Çıkış yap</button
+            ><button class="primary" id="add-product">＋ Yeni halı ekle</button>
+          </div>
+        </div>
+        <div class="admin-stats">
+          <div><span>Toplam ürün</span><strong id="total-stat">0</strong></div>
+          <div>
+            <span>Koleksiyonda mevcut</span
+            ><strong id="available-stat">0</strong>
+          </div>
+          <div><span>Fotoğraf</span><strong id="photo-stat">0</strong></div>
+        </div>
+        <div class="admin-list-heading">
+          <h2>Halılarınız</h2>
+          <label class="search"
+            ><span>⌕</span
+            ><input
+              type="search"
+              id="admin-search"
+              placeholder="Ürün adı veya türü ara"
+              aria-label="Yönetimde ürün ara"
+          /></label>
+        </div>
+        <div id="admin-list"></div>
+      </section>
+    </main>
+    <dialog id="editor" class="editor-dialog" aria-labelledby="editor-title">
+      <div class="editor-heading">
+        <div>
+          <div class="eyebrow">KOLEKSİYONA BİR HİKÂYE EKLEYİN</div>
+          <h2 id="editor-title">Yeni halı ekle</h2>
+        </div>
+        <button
+          type="button"
+          id="close-editor"
+          class="icon-button"
+          aria-label="Formu kapat"
+        >
+          ×
+        </button>
+      </div>
+      <form id="product-form">
+        <div class="editor-columns">
+          <section>
+            <h3>Fotoğraflar</h3>
+            <p class="field-hint">
+              İlk fotoğraf vitrinin kapak görselidir. Oklarla
+              sıralayabilirsiniz.
+            </p>
+            <label class="upload-zone" id="drop-zone"
+              ><span>＋</span
+              ><strong>Fotoğrafları seçin veya buraya bırakın</strong
+              ><small
+                >JPEG, PNG, WebP · En fazla 10 fotoğraf · Her biri 8 MB</small
+              ><input
+                id="photo-input"
+                type="file"
+                accept="image/jpeg,image/png,image/webp"
+                multiple
+            /></label>
+            <div id="photo-previews" class="photo-previews"></div>
+          </section>
+          <section class="product-fields">
+            <h3>Ürün bilgileri</h3>
+            <label
+              >Halı adı<input
+                name="name"
+                required
+                minlength="2"
+                maxlength="100"
+                placeholder="Örn. Anadolu motifli kilim" /></label
+            ><label
+              >Halı türü<input
+                name="type"
+                aria-label="Halı türü"
+                list="rug-types"
+                required
+                maxlength="60"
+                placeholder="Tür seçin veya yazın"
+              /><datalist id="rug-types">
+                <option>Kilim</option>
+                <option>Klasik halı</option>
+                <option>Modern halı</option>
+                <option>Shaggy</option>
+                <option>Yolluk</option>
+              </datalist></label
+            >
+            <div class="field-row">
+              <label
+                >En (cm)<input
+                  type="number"
+                  name="width"
+                  min="10"
+                  max="2000"
+                  required
+                  placeholder="160" /></label
+              ><label
+                >Boy (cm)<input
+                  type="number"
+                  name="length"
+                  min="10"
+                  max="2000"
+                  required
+                  placeholder="230"
+              /></label>
+            </div>
+            <label
+              >Malzeme<input
+                name="material"
+                required
+                maxlength="100"
+                placeholder="Örn. Yün, pamuk, akrilik" /></label
+            ><label
+              >Açıklama<textarea
+                name="description"
+                rows="3"
+                maxlength="2000"
+                placeholder="Dokusu, renkleri ve bu halıyı özel yapan detaylar…"
+              ></textarea></label
+            ><label class="checkbox-label"
+              ><input name="available" type="checkbox" checked /> Koleksiyonda
+              mevcut</label
+            >
+          </section>
+        </div>
+        <div class="editor-footer">
+          <p id="save-error" class="form-error" role="alert"></p>
+          <button type="button" class="secondary" id="cancel-editor">
+            Vazgeç</button
+          ><button type="submit" class="primary" id="save-product">
+            Halıyı kaydet ↗
+          </button>
+        </div>
+      </form>
+    </dialog>
+    <dialog
+      id="delete-dialog"
+      class="confirm-dialog"
+      aria-labelledby="delete-title"
+    >
+      <h2 id="delete-title">Halı silinsin mi?</h2>
+      <p id="delete-message"></p>
+      <p>Ürün ve yüklenen fotoğrafları kalıcı olarak silinir.</p>
+      <p id="delete-error" class="form-error" role="alert"></p>
+      <div class="admin-actions">
+        <button class="secondary" id="cancel-delete">Vazgeç</button
+        ><button class="danger" id="confirm-delete">Evet, sil</button>
+      </div>
+    </dialog>
+    <div id="toast" role="status" class="toast" hidden></div>
+  </body>
+</html>

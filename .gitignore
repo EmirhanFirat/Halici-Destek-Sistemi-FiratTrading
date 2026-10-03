@@ -1,0 +1,11 @@
+**/bin/
+**/obj/
+**/App_Data/
+**/wwwroot/uploads/
+.vs/
+.idea/
+.env
+*.user
+artifacts/
+.tools/
+node_modules/

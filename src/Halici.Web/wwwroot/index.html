@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="tr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Fırat Trading halı koleksiyonu. Kilimlerden klasik halılara, evinize yakışan dokuyu keşfedin."
+    />
+    <title>Fırat Trading — Evinize dokunan hikâyeler</title>
+    <link rel="icon" href="/images/mark.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/shared.js" defer></script>
+    <script src="/catalog.js" defer></script>
+  </head>
+  <body>
+    <div class="announcement">
+      Her desen bir hikâye, her ev yeni bir başlangıç.
+    </div>
+    <header class="site-header wrap">
+      <a class="brand" href="/" aria-label="Fırat Trading ana sayfa"
+        ><img src="/images/mark.svg" alt="" /><span
+          >FIRAT TRADING<small>HALI & KİLİM KOLEKSİYONU</small></span
+        ></a
+      >
+      <nav aria-label="Ana menü">
+        <a class="active" href="#koleksiyon">Koleksiyon</a
+        ><a href="#hikayemiz">Hikâyemiz</a>
+      </nav>
+      <a class="admin-link" href="/admin.html"
+        ><span aria-hidden="true">♙</span> Yönetici girişi
+        <span aria-hidden="true">↗</span></a
+      >
+    </header>
+    <main>
+      <section class="hero wrap">
+        <div class="hero-copy">
+          <div class="eyebrow">
+            <span></span> YAŞAM ALANLARINA KARAKTER KATAN DOKULAR
+          </div>
+          <h1>Evinize dokunan<br /><em>hikâyeler.</em></h1>
+          <p>
+            Bir halıdan daha fazlası. Geleneksel motiflerden yalın çizgilere,
+            yaşam alanınızın ruhunu tamamlayan parçalar.
+          </p>
+          <a class="primary" href="#koleksiyon"
+            >Koleksiyonu keşfet <span>↗</span></a
+          >
+          <div class="hero-note">
+            <span class="mini-diamond">◇</span> Farklı dokular. Kendine özgü
+            desenler.
+          </div>
+        </div>
+        <div class="hero-art">
+          <div
+            class="hero-photo sample-photo sample-1"
+            role="img"
+            aria-label="Anadolu motifli renkli kilim"
+          ></div>
+          <div class="art-caption">
+            <span>GELENEKTEN İLHAMLA</span
+            ><strong>Her düğümde bir hikâye.</strong
+            ><span class="caption-arrow">↗</span>
+          </div>
+          <span class="vertical-note">FIRAT TRADING · SEÇİLİ PARÇALAR</span>
+        </div>
+      </section>
+      <div class="values wrap">
+        <span><b>◇</b> Özenle seçilen parçalar</span
+        ><span><b>▦</b> Her mekâna uygun ölçüler</span
+        ><span><b>❋</b> Yakından keşfedin</span>
+      </div>
+      <section id="koleksiyon" class="collection wrap">
+        <div class="section-heading">
+          <div>
+            <div class="eyebrow">DOKULARI KEŞFEDİN</div>
+            <h2>Koleksiyonumuz</h2>
+          </div>
+          <p>Size ait hissettiren parçayı bulun.</p>
+        </div>
+        <div class="catalog-tools">
+          <div class="filter-tabs" role="group" aria-label="Halı türü">
+            <button class="selected" data-type="">Tüm koleksiyon</button
+            ><button data-type="Kilim">Kilim</button
+            ><button data-type="Klasik halı">Klasik</button
+            ><button data-type="Modern halı">Modern</button
+            ><button data-type="Shaggy">Shaggy</button
+            ><button data-type="Yolluk">Yolluk</button>
+          </div>
+          <label class="search"
+            ><span aria-hidden="true">⌕</span
+            ><input
+              id="search"
+              type="search"
+              placeholder="Koleksiyonda ara"
+              aria-label="Halı ara"
+          /></label>
+        </div>
+        <div class="results-bar">
+          <span id="result-count" role="status">Koleksiyon yükleniyor…</span
+          ><label
+            >Sıralama
+            <select id="sort">
+              <option value="new">En yeni eklenenler</option>
+              <option value="name">İsme göre A–Z</option>
+              <option value="size">Ölçüye göre küçükten büyüğe</option>
+            </select></label
+          >
+        </div>
+        <div
+          id="product-grid"
+          class="product-grid"
+          aria-label="Halı koleksiyonu"
+        ></div>
+        <div id="empty-state" class="empty-state" hidden>
+          <span>◇</span>
+          <h3>Aradığınız parça henüz burada değil.</h3>
+          <p>Başka bir kelime veya halı türü deneyin.</p>
+          <button id="reset-filters" class="secondary">
+            Filtreleri temizle
+          </button>
+        </div>
+        <p class="sample-notice" id="sample-notice" hidden>
+          Örnek koleksiyon · Fotoğraflar referans görselinden alınmıştır. Ürün
+          adları ve ölçüler gösterim amaçlıdır.
+        </p>
+      </section>
+      <section id="hikayemiz" class="story wrap">
+        <div class="eyebrow">FIRAT TRADING</div>
+        <h2>Bir odayı ev yapan,<br /><em>küçük dokunuşlardır.</em></h2>
+        <p>
+          Renk, desen ve dokunun bir araya geldiği koleksiyonumuzu keşfedin.
+          Beğendiğiniz halıya tıklayın, detaylarını yakından inceleyin ve
+          evinizdeki yerini hayal edin.
+        </p>
+        <a href="#koleksiyon">Size ait parçayı keşfedin ↗</a>
+      </section>
+    </main>
+    <footer class="wrap">
+      <a class="brand" href="/">FIRAT TRADING</a
+      ><span>Halılar, kilimler ve yaşanacak hikâyeler.</span
+      ><small>© <span id="year"></span> Fırat Trading</small>
+    </footer>
+    <dialog id="gallery" class="gallery-dialog" aria-labelledby="gallery-name">
+      <button class="dialog-close" aria-label="Galeriyi kapat">×</button>
+      <div class="gallery-layout">
+        <div class="gallery-visual">
+          <div id="gallery-image" class="gallery-image"></div>
+          <button
+            id="prev-photo"
+            class="gallery-arrow prev"
+            aria-label="Önceki fotoğraf"
+          >
+            ←</button
+          ><button
+            id="next-photo"
+            class="gallery-arrow next"
+            aria-label="Sonraki fotoğraf"
+          >
+            →
+          </button>
+          <div id="photo-count" class="photo-count" aria-live="polite"></div>
+        </div>
+        <div class="gallery-detail">
+          <div class="eyebrow" id="gallery-type"></div>
+          <h2 id="gallery-name"></h2>
+          <span id="gallery-status" class="status-pill"></span>
+          <dl>
+            <div>
+              <dt>Ölçü</dt>
+              <dd id="gallery-size"></dd>
+            </div>
+            <div>
+              <dt>Malzeme</dt>
+              <dd id="gallery-material"></dd>
+            </div>
+            <div>
+              <dt>Ürün kodu</dt>
+              <dd id="gallery-code"></dd>
+            </div>
+          </dl>
+          <p id="gallery-description"></p>
+          <div
+            id="thumbnails"
+            class="thumbnails"
+            aria-label="Ürün fotoğrafları"
+          ></div>
+          <p class="gallery-tip">
+            ← → Okları kullanın veya fotoğrafı sürükleyin.<br />Kapatmak için
+            Esc tuşuna basın.
+          </p>
+        </div>
+      </div>
+    </dialog>
+    <div id="toast" role="status" class="toast" hidden></div>
+  </body>
+</html>
