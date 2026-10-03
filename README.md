@@ -4,6 +4,10 @@ ASP.NET Core 10 ve SQLite ile hazırlanmış halı vitrini ve yönetim paneli. M
 
 ## Çalıştırma
 
+Windows'ta `Siteyi-Baslat.cmd` dosyasına çift tıklayabilirsiniz. Sunucuyu gizli bir arka plan süreci olarak başlatır ve tarayıcıyı açar. Bilgisayar yeniden başlatıldığında dosyayı tekrar çalıştırın. Günlükler `src/Halici.Web/App_Data/server.log` ve `server-error.log` dosyalarındadır.
+
+Tarayıcı açmadan arka planda başlatmak için: `./scripts/start.ps1 -Background`. Sunucu zaten yanıt veriyorsa ikinci süreç başlatılmaz.
+
 .NET 10 SDK gereklidir. Ayrı SQL sunucusu, Node.js veya Docker uygulamayı çalıştırmak için gerekli değildir.
 
 ```powershell
