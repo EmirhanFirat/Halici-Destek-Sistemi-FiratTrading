@@ -30,6 +30,7 @@ dotnet run --project src/Halici.Web --urls http://localhost:5080
 
 - Masaüstünde dört, mobilde iki sütunlu kart düzeni; halı türü ve santimetre cinsinden ölçü bilgileri.
 - Tür filtresi, Türkçe arama, ada/ölçüye/yeni eklenene göre sıralama.
+- Koleksiyon girişinde üç halının sırayla süzüldüğü CSS 3D sahnesi: kıvrılan yüzeyler, gölgeler, fareyle perspektif tepkisi ve yeniden oynatma. Sahnedeki halılar ürün galerisini açar. Gerçek ürünler örneklerden önce seçilir; mevcut olmayan ürünler gösterilmez. Animasyon yalnızca sahne görünürken oynar, mobilde sadeleşir ve hareket azaltma tercihinde kapatılır.
 - Sayfa değiştirmeyen büyük fotoğraf galerisi; önceki/sonraki okları, klavye okları, fare sol tuşuyla sürükleme ve dokunmatik kaydırma. Escape ile kapanır.
 - Yönetici girişi/çıkışı, ürün ekleme/düzenleme/silme, mevcut/satıldı durumu.
 - En fazla 10 fotoğraf, fotoğraf başına 8 MB, toplam istek 40 MB. JPEG/PNG/WebP dosya imzası kontrolü; sürükle-bırak, önizleme ve kapak/sıralama seçimi.

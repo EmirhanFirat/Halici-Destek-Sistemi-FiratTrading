@@ -10,8 +10,10 @@
     <title>Fırat Trading — Evinize dokunan hikâyeler</title>
     <link rel="icon" href="/images/mark.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="/styles.css" />
+    <link rel="stylesheet" href="/rug-scene.css?v=1" />
     <script src="/shared.js" defer></script>
-    <script src="/catalog.js" defer></script>
+    <script src="/rug-scene.js?v=1" defer></script>
+    <script src="/catalog.js?v=2" defer></script>
   </head>
   <body>
     <div class="announcement">
@@ -78,6 +80,35 @@
           </div>
           <p>Size ait hissettiren parçayı bulun.</p>
         </div>
+        <section
+          class="rug-showcase"
+          id="rug-showcase"
+          aria-label="Koleksiyondan seçili halılar"
+          hidden
+        >
+          <div class="showcase-copy">
+            <div class="eyebrow">DESENLER HAYAT BULUYOR</div>
+            <h3>
+              Biraz gelenek.<br />
+              <em>Biraz sihir.</em>
+            </h3>
+            <p>
+              Bir desene dokunun,<br />
+              hikâyesini yakından keşfedin.
+            </p>
+            <button
+              type="button"
+              class="scene-replay"
+              aria-label="Halıların süzülme animasyonunu yeniden oynat"
+            >
+              ↻ <span>Yeniden izle</span>
+            </button>
+          </div>
+          <div class="rug-stage"><div class="rug-stage-inner"></div></div>
+          <span class="showcase-signature" aria-hidden="true"
+            >DOKU · DESEN · HİKÂYE</span
+          >
+        </section>
         <div class="catalog-tools">
           <div class="filter-tabs" role="group" aria-label="Halı türü">
             <button class="selected" data-type="">Tüm koleksiyon</button

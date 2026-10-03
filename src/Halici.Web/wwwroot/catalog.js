@@ -9,6 +9,7 @@ async function loadCatalog() {
   try {
     rugs = await api("/api/products");
     render();
+    window.mountRugScene?.(rugs, openGallery);
   } catch (error) {
     document.querySelector("#result-count").textContent =
       "Koleksiyon yüklenemedi.";

@@ -36,6 +36,14 @@ Codex içi Chromium tarayıcısında 1440 × 1000 ve 390 × 844 ekran boyutları
 
 Tarayıcı kontrolü için oluşturulan geçici ürün ve yüklemeleri silindi. Gerçek katalogda yalnızca sekiz örnek ürün bırakıldı.
 
+## 3D vitrin güncellemesi
+
+- Masaüstünde 1440 × 1000, mobilde 390 × 844 görünümünde üç fotoğraflı 3D sahne kontrol edildi.
+- Yeniden oynatma düğmesinden sonra animasyonun `settled` durumuna geçtiği doğrulandı; sürekli animasyon döngüsü yok.
+- Sahnedeki Geometrik ahenk halısı doğru ürün galerisini açtı; Escape ile kapandı.
+- Mobilde belge genişliği ve yatay kaydırma genişliği 375 piksel: yatay taşma yok.
+- Hareket azaltma tercihi CSS ve JavaScript tarafında ele alındı. İşletim sistemi tercihi değiştirilerek test edilmedi.
+
 ## Sınırlar
 
 Docker imajı bu ortamda çalıştırılmadı. Gerçek telefon cihazı, yüksek eşzamanlı yük, üretim HTTPS/proxy dağıtımı ve harici güvenlik denetimi yapılmadı. Fotoğraf doğrulaması dosya boyutu ve dosya imzasını kontrol eder; fotoğrafları yeniden kodlayan bir medya işleme servisi içermez.
